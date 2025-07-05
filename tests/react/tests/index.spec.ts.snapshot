@@ -1,0 +1,44 @@
+exports[`works 1`] = `
+[
+  "src/FooBar.tsx:6:3 lint/correctness/useExhaustiveDependencies  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+  "",
+  "  × This hook does not specify its dependency on s.trim.",
+  "  ",
+  "    4 │   const [s, setS] = useState('');",
+  "    5 │ ",
+  "  > 6 │   useEffect(() => {",
+  "      │   ^^^^^^^^^",
+  "    7 │     s.trim();",
+  "    8 │   }, []);",
+  "  ",
+  "  i This dependency is being used here, but is not specified in the hook dependency list.",
+  "  ",
+  "    6 │   useEffect(() => {",
+  "  > 7 │     s.trim();",
+  "      │     ^^^^^^",
+  "    8 │   }, []);",
+  "    9 │ ",
+  "  ",
+  "  i Either include it or remove the dependency array.",
+  "  ",
+  "  i Unsafe fix: Add the missing dependency to the list.",
+  "  ",
+  "    8 │ ··},·[s.trim]);",
+  "      │       ++++++   ",
+  "",
+  "lint ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+  "",
+  "  × Some errors were emitted while running checks.",
+  "  ",
+  "",
+  ""
+]
+`;
+
+exports[`works 2`] = `
+[
+  "Checked 1 file in 2ms. No fixes applied.",
+  "Found 1 error.",
+  ""
+]
+`;

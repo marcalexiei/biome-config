@@ -1,0 +1,29 @@
+{
+  "name": "@marcalexiei/biome-config",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "exports": "./biome-config.json.json",
+  "files": [
+    "biome-config.json"
+  ],
+  "scripts": {
+    "format": "biome format",
+    "format:fix": "biome format --fix",
+    "test": "pnpm --filter=\"tests-*\" run test"
+  },
+  "keywords": [
+    "biome",
+    "config"
+  ],
+  "author": "marcalexiei",
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.4",
+  "peerDependencies": {
+    "@biomejs/biome": "^2.0.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@types/node": "24.0.10"
+  }
+}
