@@ -1,5 +1,11 @@
 # @marcalexiei/biome-config
 
+## 1.0.2
+
+### Patch Changes
+
+- [`b6f8c5e`](https://github.com/marcalexiei/biome-config/commit/b6f8c5eca1ae479f892b33da880661cf621c42e1) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(package): improve package output
+
 ## 1.0.1
 
 ### Patch Changes
