@@ -1,5 +1,11 @@
 # @marcalexiei/biome-config
 
+## 1.1.0
+
+### Minor Changes
+
+- [`65368ce`](https://github.com/marcalexiei/biome-config/commit/65368ce13dbb38644549a67f46c7dbefd7d92c52) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat: disable `noDefaultExport` on vite(st) files
+
 ## 1.0.2
 
 ### Patch Changes
