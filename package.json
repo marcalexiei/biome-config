@@ -1,15 +1,26 @@
 {
   "name": "@marcalexiei/biome-config",
   "version": "1.0.0",
-  "description": "",
+  "description": "Custom BiomeJS config",
   "type": "module",
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "biome",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcalexiei/biome-config"
+  },
+  "author": "Marco Pasqualetti @marcalexiei",
+  "license": "MIT",
   "exports": "./biome-config.json.json",
   "files": [
     "biome-config.json"
   ],
+  "packageManager": "pnpm@10.12.4",
   "scripts": {
     "format": "biome format",
     "format:fix": "biome format --fix",
@@ -17,13 +28,6 @@
     "release": "changeset publish",
     "check-all": "pnpm run format && pnpm run test"
   },
-  "keywords": [
-    "biome",
-    "config"
-  ],
-  "author": "marcalexiei",
-  "license": "MIT",
-  "packageManager": "pnpm@10.12.4",
   "peerDependencies": {
     "@biomejs/biome": "^2.0.6"
   },
