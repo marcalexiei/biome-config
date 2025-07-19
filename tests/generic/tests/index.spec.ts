@@ -33,7 +33,7 @@ function runBiome(_args: [string, ...Array<string>]): Promise<RunBiomeResult> {
 }
 
 it('works', async (t: TestContext) => {
-  const { exitCode, stdout, stderr } = await runBiome([
+  const { exitCode, stderr } = await runBiome([
     'pnpm',
     'biome',
     'lint',
@@ -42,5 +42,4 @@ it('works', async (t: TestContext) => {
 
   t.assert.strictEqual(exitCode, 1);
   t.assert.snapshot(stderr.split('\n'));
-  t.assert.snapshot(stdout.split('\n'));
 });

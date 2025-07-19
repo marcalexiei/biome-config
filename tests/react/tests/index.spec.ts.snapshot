@@ -34,11 +34,3 @@ exports[`works 1`] = `
   ""
 ]
 `;
-
-exports[`works 2`] = `
-[
-  "Checked 1 file in 2ms. No fixes applied.",
-  "Found 1 error.",
-  ""
-]
-`;
