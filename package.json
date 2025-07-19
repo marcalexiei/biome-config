@@ -16,9 +16,11 @@
   },
   "author": "Marco Pasqualetti @marcalexiei",
   "license": "MIT",
-  "exports": "./biome-config.json.json",
+  "exports": {
+    "./*.json": "./configs/*.json"
+  },
   "files": [
-    "biome-config.json"
+    "configs"
   ],
   "packageManager": "pnpm@10.12.4",
   "scripts": {
