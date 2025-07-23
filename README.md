@@ -6,7 +6,7 @@
 [![issues][issuesBadge]][issuesURL]
 
 [CIBadge]: https://github.com/marcalexiei/biome-config/actions/workflows/CI.yml/badge.svg
-[CIURL]: https://github.com/marcalexiei/biome-config/actions/workflows/CI.yml/badge.svg
+[CIURL]: https://github.com/marcalexiei/biome-config/actions/workflows/CI.yml
 [CodeStyleBadge]: https://img.shields.io/badge/Formatted_with-Biome-60a5fa?style=flat&logo=biome
 [CodeStyleURL]: https://biomejs.dev/
 [npmVersionBadge]: https://img.shields.io/npm/v/@marcalexiei/biome-config.svg?style=flat-square
