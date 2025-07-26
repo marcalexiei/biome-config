@@ -1,0 +1,9 @@
+{
+  "$schema": "../../node_modules/@biomejs/biome/configuration_schema.json",
+  "root": true,
+  "extends": ["../../configs/base.json", "../../configs/react.json"],
+  "vcs": {
+    // Disabling vcs since it might cause errors due to missing .gitignore file in this directory
+    "enabled": false
+  }
+}

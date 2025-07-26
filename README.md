@@ -27,6 +27,43 @@
    ```json
    {
      "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-     "extends": ["./node_modules/@marcalexiei/biome-config/configs/base.json"],
+     "extends": ["@marcalexiei/biome-config/base"]
    }
    ```
+
+> [!NOTE]
+> It turns out that when you “extend” a base config that only supplies linter.rules,
+> you end up dropping the default `linter.domains: { project: "all" }`,
+> so your `useImportExtensions` never actually runs on your files.
+>
+> Be sure to override them on your end
+>
+> ```json
+> {
+>   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+>   "extends": ["@marcalexiei/biome-config/base"],
+>   "linter": {
+>     "domains": {
+>       "project": "all"
+>     }
+>   }
+> }
+> ```
+
+## Additional configs
+
+There additional configs that can be used:
+
+- `react`
+- `css`
+
+```json
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": [
+    "@marcalexiei/biome-config/base",
+    "@marcalexiei/biome-config/react",
+    "@marcalexiei/biome-config/css",
+  ]
+}
+```

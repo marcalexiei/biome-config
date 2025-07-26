@@ -1,11 +1,10 @@
 {
-  "name": "tests-generic",
+  "name": "tests-base",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node --test tests/index.spec.ts",
     "test:update": "node --test --test-update-snapshots tests/index.spec.ts",
     "test:biome": "biome lint ./src"
-  },
-  "devDependencies": {}
+  }
 }
