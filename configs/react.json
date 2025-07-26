@@ -1,0 +1,36 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "linter": {
+    "rules": {
+      "complexity": {
+        "noUselessFragments": "error"
+      },
+      "correctness": {
+        "noVoidElementsWithChildren": "error",
+        "useHookAtTopLevel": "error",
+        "useExhaustiveDependencies": "error",
+        "useJsxKeyInIterable": "error"
+      },
+      "nursery": {
+        "noReactPropAssign": "error"
+      },
+      "security": {
+        "noBlankTarget": "error",
+        "noDangerouslySetInnerHtml": "error",
+        "noDangerouslySetInnerHtmlWithChildren": "error"
+      },
+      "style": {
+        "noImplicitBoolean": "off",
+        "useFragmentSyntax": "error",
+        "useConsistentCurlyBraces": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "error",
+        "noSparseArray": "error",
+        "noCommentText": "error",
+        "noSuspiciousSemicolonInJsx": "error",
+        "noDuplicateJsxProps": "error"
+      }
+    }
+  }
+}
