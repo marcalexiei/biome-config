@@ -1,5 +1,15 @@
 # @marcalexiei/biome-config
 
+## 1.2.0
+
+### Minor Changes
+
+- [#6](https://github.com/marcalexiei/biome-config/pull/6) [`d079a1a`](https://github.com/marcalexiei/biome-config/commit/d079a1ad0b647da585d33e23f08e33e66ff166ba) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat: add project related rules
+
+- [#6](https://github.com/marcalexiei/biome-config/pull/6) [`d079a1a`](https://github.com/marcalexiei/biome-config/commit/d079a1ad0b647da585d33e23f08e33e66ff166ba) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat: add `react` config
+
+- [#6](https://github.com/marcalexiei/biome-config/pull/6) [`d079a1a`](https://github.com/marcalexiei/biome-config/commit/d079a1ad0b647da585d33e23f08e33e66ff166ba) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat: add `css` config`
+
 ## 1.1.0
 
 ### Minor Changes
