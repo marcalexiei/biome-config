@@ -32,12 +32,36 @@ function runBiome(_args: [string, ...Array<string>]): Promise<RunBiomeResult> {
   });
 }
 
-it('works', async (t: TestContext) => {
+it('simple file', async (t: TestContext) => {
   const { exitCode, stderr } = await runBiome([
     'pnpm',
     'biome',
     'lint',
-    './src',
+    './src/utils.ts',
+  ]);
+
+  t.assert.strictEqual(exitCode, 1);
+  t.assert.snapshot(stderr.split('\n'));
+});
+
+it('import extensions', async (t: TestContext) => {
+  const { exitCode, stderr } = await runBiome([
+    'pnpm',
+    'biome',
+    'lint',
+    './src/import-extensions.ts',
+  ]);
+
+  t.assert.strictEqual(exitCode, 1);
+  t.assert.snapshot(stderr.split('\n'));
+});
+
+it('no imports cycle', async (t: TestContext) => {
+  const { exitCode, stderr } = await runBiome([
+    'pnpm',
+    'biome',
+    'lint',
+    './src/no-imports-cycle',
   ]);
 
   t.assert.strictEqual(exitCode, 1);
