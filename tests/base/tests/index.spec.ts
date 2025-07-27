@@ -67,3 +67,15 @@ it('no imports cycle', async (t: TestContext) => {
   t.assert.strictEqual(exitCode, 1);
   t.assert.snapshot(stderr.split('\n'));
 });
+
+/** @see https://github.com/marcalexiei/biome-config/issues/8 */
+it('should not report useNamingConvention on test files mocks', async (t: TestContext) => {
+  const { exitCode } = await runBiome([
+    'pnpm',
+    'biome',
+    'lint',
+    './src/header.spec.ts',
+  ]);
+
+  t.assert.strictEqual(exitCode, 0);
+});
