@@ -1,5 +1,11 @@
 # @marcalexiei/biome-config
 
+## 1.2.1
+
+### Patch Changes
+
+- [`e7c1c0d`](https://github.com/marcalexiei/biome-config/commit/e7c1c0d14214137ae359c4249fafb1f65f144bbd) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(base): refine `useNamingConvention` on test files
+
 ## 1.2.0
 
 ### Minor Changes
