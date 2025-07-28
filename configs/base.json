@@ -294,7 +294,7 @@
   },
   "overrides": [
     {
-      "includes": ["**/{vite,vitest}.config.ts"],
+      "includes": ["**/{vite,vitest}.config.ts", "**/.vitepress/config.ts"],
       "linter": {
         "rules": {
           "style": {
