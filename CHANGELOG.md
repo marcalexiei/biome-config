@@ -1,5 +1,11 @@
 # @marcalexiei/biome-config
 
+## 1.2.2
+
+### Patch Changes
+
+- [`e09b648`](https://github.com/marcalexiei/biome-config/commit/e09b6482225e372af3ba49d3bc504348adcbff62) Thanks [@marcalexiei](https://github.com/marcalexiei)! - Add VitePress config to noDefaultExport exclusion
+
 ## 1.2.1
 
 ### Patch Changes
