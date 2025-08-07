@@ -1,5 +1,11 @@
 # @marcalexiei/biome-config
 
+## 1.3.0
+
+### Minor Changes
+
+- [`320a0be`](https://github.com/marcalexiei/biome-config/commit/320a0be990a36c7a2579d0ac5592c66763f55efb) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): add `useAdjacentOverloadSignatures` rule
+
 ## 1.2.2
 
 ### Patch Changes
