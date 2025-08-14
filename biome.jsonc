@@ -3,7 +3,7 @@
   "root": true,
   "extends": ["./configs/base.json"],
   "files": {
-    "includes": ["!./tests/**/*"]
+    "includes": ["configs/**", "scripts/**", "!tests"]
   },
   "overrides": [
     {

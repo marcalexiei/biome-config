@@ -50,25 +50,30 @@ const ignoredRules = [
   'noChildrenProp',
   'noNodejsModules',
   'noPrivateImports',
+  'noProcessGlobal',
   'noRenderReturnValue',
   'useIsNan', // default enabled
   'noVoidTypeReturn', // default enabled
+  'noSolidDestructuredProps', // solid
 
   // Nursery
   'useSortedClasses', // WIP https://biomejs.dev/linter/rules/use-sorted-classes/
   'noNestedComponentDefinitions',
   'noNoninteractiveElementInteractions',
-  'noProcessGlobal',
   'noRestrictedElements',
   'useReadonlyClassProperties',
-  "noUnresolvedImports", // typescript already handle this
+  'noUnresolvedImports', // typescript already handle this
+  'useSolidForComponent', // solid
 
   // identify `swaggerObject` and `createJsonSchemaTransformObject - OpenAPI 2.0 is not supported` as potential secrets
   // https://github.com/biomejs/biome/issues/4113
   'noSecrets',
 
   'noVueReservedProps',
+  'noVueDataObjectDeclaration',
+  'noVueReservedKeys',
 
+  'noNextAsyncClientComponent', // next
   'noUnwantedPolyfillio', // next
   'useGoogleFontPreconnect', // next
 
@@ -76,7 +81,12 @@ const ignoredRules = [
   'useForComponent', // solid
 
   'useNamedOperation', // graphql
+
   'useUniqueElementIds', // react
+
+  'noQwikUseVisibleTask', // qwik
+  'useImageSize', // qwik
+  'useQwikClasslist', // qwik
 
   // Style
   'noDoneCallback',
@@ -108,6 +118,7 @@ const ignoredRules = [
   'noEmptyBlock', // default enabled
   'noWith', // default enabled
   'noSelfCompare', // default enabled
+  'noQuickfixBiome', // not needed
 
   'noDocumentImportInPage', // next
   'noHeadImportInDocument', // next

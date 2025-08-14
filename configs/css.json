@@ -2,6 +2,9 @@
   "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
   "linter": {
     "rules": {
+      "complexity": {
+        "noImportantStyles": "error"
+      },
       "correctness": {
         "noInvalidDirectionInLinearGradient": "error",
         "noInvalidGridAreas": "error",
@@ -16,10 +19,7 @@
         "noUnknownUnit": "error",
         "noUnmatchableAnbSelector": "error"
       },
-      "nursery": {
-        "noImportantStyles": "error",
-        "noUnknownAtRule": "error"
-      },
+      "nursery": {},
       "style": {
         "noDescendingSpecificity": "error",
         "noValueAtRule": "error"
@@ -30,7 +30,8 @@
         "noDuplicateCustomProperties": "error",
         "noDuplicateFontNames": "error",
         "noDuplicateSelectorsKeyframeBlock": "error",
-        "noDuplicateProperties": "error"
+        "noDuplicateProperties": "error",
+        "noUnknownAtRules": "error"
       }
     }
   }
