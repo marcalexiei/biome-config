@@ -5,13 +5,13 @@
 [![npm version][npmVersionBadge]][npmVersionURL]
 [![issues][issuesBadge]][issuesURL]
 
-[CIBadge]: https://github.com/marcalexiei/biome-config/actions/workflows/CI.yml/badge.svg
+[CIBadge]: https://img.shields.io/github/actions/workflow/status/marcalexiei/biome-config/CI.yml?style=for-the-badge&logo=github&event=push&label=CI
 [CIURL]: https://github.com/marcalexiei/biome-config/actions/workflows/CI.yml
-[CodeStyleBadge]: https://img.shields.io/badge/Formatted_with-Biome-60a5fa?style=flat&logo=biome
+[CodeStyleBadge]: https://img.shields.io/badge/Formatted_with-Biome-60a5fa?style=for-the-badge&logo=biome
 [CodeStyleURL]: https://biomejs.dev/
-[npmVersionBadge]: https://img.shields.io/npm/v/@marcalexiei/biome-config.svg?style=flat-square
+[npmVersionBadge]: https://img.shields.io/npm/v/@marcalexiei/biome-config.svg?style=for-the-badge&logo=npm
 [npmVersionURL]: https://www.npmjs.com/package/@marcalexiei/biome-config
-[issuesBadge]: https://img.shields.io/github/issues/marcalexiei/biome-config.svg
+[issuesBadge]: https://img.shields.io/github/issues/marcalexiei/biome-config.svg?style=for-the-badge
 [issuesURL]: https://github.com/marcalexiei/biome-config/issues
 
 ## Getting started
