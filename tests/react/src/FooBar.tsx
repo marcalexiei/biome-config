@@ -1,4 +1,5 @@
-import { type JSX, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import type { JSX } from 'react';
 
 export function FooBar(): JSX.Element {
   const [s, setS] = useState('');

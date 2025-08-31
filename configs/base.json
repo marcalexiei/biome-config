@@ -213,7 +213,12 @@
         "useForOf": "error",
         "useGraphqlNamingConvention": "error",
         "useGroupedAccessorPairs": "error",
-        "useImportType": "error",
+        "useImportType": {
+          "level": "error",
+          "options": {
+            "style": "separatedType"
+          }
+        },
         "useLiteralEnumMembers": "error",
         "useNamingConvention": {
           "level": "error",
