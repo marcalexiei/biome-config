@@ -1,5 +1,13 @@
 # @marcalexiei/biome-config
 
+## 1.4.0
+
+### Minor Changes
+
+- [`03be89a`](https://github.com/marcalexiei/biome-config/commit/03be89a0c08258d5a4eb2ef78046953017e9b6f2) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): customise `organizeImports`
+
+- [`d990f74`](https://github.com/marcalexiei/biome-config/commit/d990f74d76c088615f1af7b912df82c6833e34d0) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): `useImportType` - set `separatedType` as style
+
 ## 1.3.0
 
 ### Minor Changes
