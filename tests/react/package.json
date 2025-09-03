@@ -8,7 +8,7 @@
     "test:biome": "biome lint ./src"
   },
   "devDependencies": {
-    "@types/react": "19.1.9",
+    "@types/react": "19.1.12",
     "react": "19.1.1"
   }
 }
