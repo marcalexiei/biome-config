@@ -1,5 +1,14 @@
 # @marcalexiei/biome-config
 
+## 2.0.0
+
+### Major Changes
+
+- [#19](https://github.com/marcalexiei/biome-config/pull/19) [`b883fee`](https://github.com/marcalexiei/biome-config/commit/b883fee4c6969a0abc44e2a45a424c7dee438a50) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat!: support biome >2.2.3
+
+  - add experimental rule `noUselessCatchBinding`
+  - add experimental rule `useConsistentArrowReturn`
+
 ## 1.4.0
 
 ### Minor Changes
