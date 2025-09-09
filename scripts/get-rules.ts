@@ -72,6 +72,7 @@ const ignoredRules = [
   'noVueReservedProps',
   'noVueDataObjectDeclaration',
   'noVueReservedKeys',
+  'useVueMultiWordComponentNames',
 
   'noNextAsyncClientComponent', // next
   'noUnwantedPolyfillio', // next
