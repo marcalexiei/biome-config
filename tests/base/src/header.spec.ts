@@ -1,4 +1,4 @@
-// should not return no error
+// should return no error
 function importOriginal<T>(): Promise<T> {
   return Promise.resolve({} as T);
 }

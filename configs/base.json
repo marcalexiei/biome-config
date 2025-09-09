@@ -153,7 +153,9 @@
         "noShadow": "error",
         "noUnnecessaryConditions": "error",
         "noUselessUndefined": "error",
+        "noUselessCatchBinding": "error",
         "useAnchorHref": "error",
+        "useConsistentArrowReturn": "error",
         "useConsistentTypeDefinitions": {
           "level": "error",
           "options": { "style": "interface" }
