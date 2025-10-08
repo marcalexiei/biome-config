@@ -107,6 +107,7 @@
         "useWhile": "error"
       },
       "correctness": {
+        "noChildrenProp": "off",
         "noConstAssign": "error",
         "noConstantCondition": "error",
         "noConstantMathMinMaxClamp": "error",
@@ -121,6 +122,9 @@
         "noInvalidUseBeforeDeclaration": "error",
         "noNonoctalDecimalEscape": "error",
         "noPrecisionLoss": "error",
+        "noPrivateImports": "error",
+        "noProcessGlobal": "error",
+        "noRenderReturnValue": "off",
         "noSelfAssign": "error",
         "noSetterReturn": "error",
         "noStringCaseMismatch": "error",
@@ -136,8 +140,10 @@
         "noUnusedLabels": "error",
         "noUnusedPrivateClassMembers": "error",
         "noUnusedVariables": "error",
+        "noVoidTypeReturn": "error",
         "useGraphqlNamedOperations": "error",
         "useImportExtensions": "error",
+        "useIsNan": "error",
         "useJsonImportAttributes": "error",
         "useParseIntRadix": "error",
         "useSingleJsDocAsterisk": "error",
@@ -152,19 +158,23 @@
         "noNonNullAssertedOptionalChain": "error",
         "noShadow": "error",
         "noUnnecessaryConditions": "error",
-        "noUselessUndefined": "error",
         "noUselessCatchBinding": "error",
+        "noUselessUndefined": "error",
         "useAnchorHref": "error",
         "useConsistentArrowReturn": "error",
         "useConsistentTypeDefinitions": {
           "level": "error",
-          "options": { "style": "interface" }
+          "options": {
+            "style": "interface"
+          }
         },
         "useExhaustiveSwitchCases": "error",
         "useExplicitType": "off",
         "useMaxParams": {
           "level": "error",
-          "options": { "max": 4 }
+          "options": {
+            "max": 4
+          }
         }
       },
       "performance": {
@@ -192,11 +202,11 @@
         "noNestedTernary": "error",
         "noNonNullAssertion": "error",
         "noParameterAssign": "error",
-        "noYodaExpression": "error",
         "noShoutyConstants": "error",
         "noSubstr": "error",
         "noUnusedTemplateLiteral": "error",
         "noUselessElse": "error",
+        "noYodaExpression": "error",
         "useArrayLiterals": "error",
         "useAsConstAssertion": "error",
         "useAtIndex": "error",
@@ -213,7 +223,9 @@
         "useConsistentBuiltinInstantiation": "error",
         "useConsistentMemberAccessibility": {
           "level": "error",
-          "options": { "accessibility": "explicit" }
+          "options": {
+            "accessibility": "explicit"
+          }
         },
         "useConsistentObjectDefinitions": {
           "level": "error",
@@ -285,20 +297,35 @@
         "noDuplicateObjectKeys": "error",
         "noDuplicateParameters": "error",
         "noDuplicateTestHooks": "error",
+        "noEmptyBlock": "error",
+        "noEmptyBlockStatements": "error",
+        "noEmptyInterface": "error",
         "noEvolvingTypes": "error",
         "noExplicitAny": "error",
         "noExportsInTest": "error",
+        "noExtraNonNullAssertion": "error",
+        "noFallthroughSwitchClause": "error",
         "noFocusedTests": "error",
         "noFunctionAssign": "error",
         "noGlobalAssign": "error",
+        "noGlobalIsFinite": "error",
         "noGlobalIsNan": "error",
+        "noImportAssign": "error",
+        "noImplicitAnyLet": "error",
+        "noIrregularWhitespace": "error",
+        "noLabelVar": "error",
+        "noMisleadingCharacterClass": "error",
         "noMisleadingInstantiator": "error",
         "noMisplacedAssertion": "error",
+        "noMisrefactoredShorthandAssign": "error",
+        "noOctalEscape": "error",
         "noPrototypeBuiltins": "error",
+        "noQuickfixBiome": "error",
         "noRedundantUseStrict": "error",
         "noRedeclare": "error",
-        "noSkippedTests": "error",
+        "noSelfCompare": "error",
         "noShadowRestrictedNames": "error",
+        "noSkippedTests": "error",
         "noTemplateCurlyInString": "error",
         "noThenProperty": "error",
         "noTsIgnore": "error",
@@ -308,9 +335,11 @@
         "noUselessEscapeInString": "error",
         "noUselessRegexBackrefs": "error",
         "noVar": "error",
+        "noWith": "error",
         "useAdjacentOverloadSignatures": "error",
         "useAwait": "error",
         "useBiomeIgnoreFolder": "error",
+        "useDefaultSwitchClauseLast": "error",
         "useErrorMessage": "error",
         "useGetterReturn": "error",
         "useGoogleFontDisplay": "error",

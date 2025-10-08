@@ -14,7 +14,9 @@ const useThemeContext = 'a';
 importOriginal<{
   ThemeContextProvider: typeof ThemeContextProvider;
   useThemeContext: typeof useThemeContext;
-}>().catch(() => {});
+}>().catch(() => {
+  /**/
+});
 
 mock('../../components/App/AppPage404', () => ({
   AppPage404: '',

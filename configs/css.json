@@ -31,7 +31,8 @@
         "noDuplicateFontNames": "error",
         "noDuplicateSelectorsKeyframeBlock": "error",
         "noDuplicateProperties": "error",
-        "noUnknownAtRules": "error"
+        "noUnknownAtRules": "error",
+        "noImportantInKeyframe": "error"
       }
     }
   }

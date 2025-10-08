@@ -4,6 +4,7 @@ import type { JSX } from 'react';
 export function FooBar(): JSX.Element {
   const [s, setS] = useState('');
 
+  // triggers lint/correctness/useExhaustiveDependencies
   useEffect(() => {
     s.trim();
   }, []);
@@ -12,5 +13,11 @@ export function FooBar(): JSX.Element {
     setS('ciao');
   }, []);
 
-  return <>{s}</>;
+  return (
+    <>
+      {s}
+      {/* triggers lint/correctness/noChildrenProp */}
+      <div children="test" />
+    </>
+  );
 }

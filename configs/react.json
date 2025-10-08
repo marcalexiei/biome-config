@@ -6,8 +6,10 @@
         "noUselessFragments": "error"
       },
       "correctness": {
+        "noChildrenProp": "error",
         "noVoidElementsWithChildren": "error",
         "noReactPropAssignments": "error",
+        "noRenderReturnValue": "error",
         "useHookAtTopLevel": "error",
         "useExhaustiveDependencies": "error",
         "useJsxKeyInIterable": "error"
