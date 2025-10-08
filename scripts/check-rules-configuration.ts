@@ -34,8 +34,6 @@ function log(
   return;
 }
 
-const [, , groupName] = process.argv;
-
 const availableGroups = [
   // 'A11y',
   'Complexity',
@@ -182,6 +180,7 @@ async function checkRulesGroupConfiguration(
 }
 
 for (const group of availableGroups) {
+  // biome-ignore lint/performance/noAwaitInLoops: logger function
   const result = await checkRulesGroupConfiguration(group);
   if (!result) {
     process.exit(1);

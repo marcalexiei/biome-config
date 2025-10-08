@@ -1,0 +1,4 @@
+pre-push:
+  jobs:
+    - name: Checks
+      run: pnpm run check-all
