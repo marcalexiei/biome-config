@@ -1,5 +1,19 @@
 # @marcalexiei/biome-config
 
+## 2.1.0
+
+### Minor Changes
+
+- [`2658ae9`](https://github.com/marcalexiei/biome-config/commit/2658ae9d30cb829214ab79276bac8e68882ab047) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): enable `noBiomeFirstException`
+
+- [`4382aa0`](https://github.com/marcalexiei/biome-config/commit/4382aa001c969c29b3e6e776211423c234ae448c) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): enable `noYodaExpression`
+
+### Patch Changes
+
+- [`40a63d5`](https://github.com/marcalexiei/biome-config/commit/40a63d52d53f7798d1c5764df9c161ef4750182c) Thanks [@marcalexiei](https://github.com/marcalexiei)! - chore: enable trusted publishing
+
+- [`7068efc`](https://github.com/marcalexiei/biome-config/commit/7068efc3ea01083b42fc0d193ff132f2c4f76d4d) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): explicit more rules
+
 ## 2.0.0
 
 ### Major Changes
