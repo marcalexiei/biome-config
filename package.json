@@ -31,9 +31,12 @@
     "format:fix": "biome format --fix",
     "format:tests": "pnpm -r exec biome format",
     "format:tests:fix": "pnpm -r exec biome format --fix",
+    "lint": "biome lint",
+    "lint:fix": "biome lint --fix",
     "test": "pnpm --workspace-concurrency=1 --filter=\"tests-*\" run test",
     "release": "changeset publish",
-    "check-all": "pnpm run format && pnpm run test"
+    "check-all": "pnpm run format && pnpm run format:tests && pnpm run lint && pnpm run test",
+    "check-rule-configuration": "./scripts/check-rules-configuration.sh "
   },
   "peerDependencies": {
     "@biomejs/biome": "^2.2.3"
