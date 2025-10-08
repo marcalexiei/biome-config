@@ -1,7 +1,8 @@
 // biome-ignore lint/style/noExportedImports: testing cycle
 import { B } from './b.ts';
 
-typeof B;
+const btype = typeof B;
+btype.slice();
 
 export const A = 'a';
 

@@ -155,30 +155,36 @@
         "useYield": "error"
       },
       "nursery": {
+        "noContinue": "error",
+        "noDeprecatedImports": "error",
+        "noDuplicateDependencies": "off",
+        "noEmptySource": "error",
+        "noEqualsToNull": "off",
         "noFloatingPromises": "error",
+        "noForIn": "error",
         "noImportCycles": "error",
+        "noIncrementDecrement": "error",
         "noMisusedPromises": "error",
-        "noNonNullAssertedOptionalChain": "error",
+        "noMultiStr": "error",
+        "noParametersOnlyUsedInRecursion": "error",
+        "noProto": "error",
         "noShadow": "error",
         "noUnnecessaryConditions": "error",
+        "noUnusedExpressions": "error",
         "noUselessCatchBinding": "error",
         "noUselessUndefined": "error",
-        "useAnchorHref": "error",
+        "useArraySortCompare": "info",
         "useConsistentArrowReturn": "error",
-        "useConsistentTypeDefinitions": {
-          "level": "error",
-          "options": {
-            "style": "interface"
-          }
-        },
         "useExhaustiveSwitchCases": "error",
         "useExplicitType": "off",
+        "useFind": "error",
         "useMaxParams": {
           "level": "error",
           "options": {
             "max": 4
           }
-        }
+        },
+        "useSpread": "error"
       },
       "performance": {
         "noAccumulatingSpread": "error",
@@ -234,6 +240,12 @@
           "level": "error",
           "options": {
             "syntax": "shorthand"
+          }
+        },
+        "useConsistentTypeDefinitions": {
+          "level": "error",
+          "options": {
+            "style": "interface"
           }
         },
         "useDefaultParameterLast": "error",
@@ -321,6 +333,7 @@
         "noMisleadingInstantiator": "error",
         "noMisplacedAssertion": "error",
         "noMisrefactoredShorthandAssign": "error",
+        "noNonNullAssertedOptionalChain": "error",
         "noOctalEscape": "error",
         "noPrototypeBuiltins": "error",
         "noQuickfixBiome": "error",

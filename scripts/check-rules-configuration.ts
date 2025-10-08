@@ -71,9 +71,9 @@ async function checkRulesGroupConfiguration(
     await fs.readFile('configs/react.json', 'utf-8'),
   );
 
-  const rules = Object.keys(
-    configSchema.definitions[groupName].properties,
-  ).filter((it) => !['recommended'].includes(it));
+  const rules = Object.keys(configSchema.$defs[groupName].properties).filter(
+    (it) => !['recommended'].includes(it),
+  );
 
   const missingRuleNames: Array<string> = [];
 
@@ -88,7 +88,8 @@ async function checkRulesGroupConfiguration(
     'noNoninteractiveElementInteractions',
     'noRestrictedElements',
     'useReadonlyClassProperties',
-    'noUnresolvedImports', // typescript already handle this
+    'noUnresolvedImports', // typescript already handles this
+    'noTernary',
 
     // identify `swaggerObject` and `createJsonSchemaTransformObject - OpenAPI 2.0 is not supported` as potential secrets
     // https://github.com/biomejs/biome/issues/4113
@@ -96,8 +97,19 @@ async function checkRulesGroupConfiguration(
 
     'noVueReservedProps', // vue
     'noVueDataObjectDeclaration', // vue
+    'noVueDuplicateKeys', // vue
+    'noVueVIfWithVFor', // vue
     'noVueReservedKeys', // vue
     'useVueMultiWordComponentNames', // vue
+    'useVueDefineMacrosOrder', // vue
+    'useVueHyphenatedAttributes', // vue
+    'useVueValidVBind', // vue
+    'useVueValidVElse', // vue
+    'useVueValidVElseIf', // vue
+    'useVueValidVHtml', // vue
+    'useVueValidVIf', // vue
+    'useVueValidVOn', // vue
+    'useVueValidVText', // vue
 
     'noNextAsyncClientComponent', // next
     'noUnwantedPolyfillio', // next
@@ -107,14 +119,20 @@ async function checkRulesGroupConfiguration(
     'useForComponent', // solid
 
     'useNamedOperation', // graphql
+    'useUniqueGraphqlOperationName', // graphql
+    'useConsistentGraphqlDescriptions', // graphql
+    'useDeprecatedDate', // graphql
 
     'useUniqueElementIds', // react
+    'noJsxLiterals', // react
+
+    'useSolidForComponent', // solid
 
     'noQwikUseVisibleTask', // qwik
     'useImageSize', // qwik
     'useQwikClasslist', // qwik
-
-    'useSolidForComponent', // solid
+    'useQwikMethodUsage', // qwik
+    'useQwikValidLexicalScope', // qwik
 
     // Style
     'noDoneCallback',
@@ -150,6 +168,7 @@ async function checkRulesGroupConfiguration(
     }
 
     if (ignoredRules.includes(ruleName)) {
+      // biome-ignore lint/nursery/noContinue: keep it simple
       continue;
     }
 
