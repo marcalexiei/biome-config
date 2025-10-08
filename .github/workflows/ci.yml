@@ -39,7 +39,7 @@ jobs:
         run: pnpm run test
 
       - name: Check that all rules are configured
-        run: pnpm run check-rule-configuration
+        run: pnpm run check-rules-configuration
 
   ci-ok:
     name: CI OK

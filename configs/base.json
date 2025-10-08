@@ -139,7 +139,10 @@
         "noUnusedImports": "error",
         "noUnusedLabels": "error",
         "noUnusedPrivateClassMembers": "error",
-        "noUnusedVariables": "error",
+        "noUnusedVariables": {
+          "level": "error",
+          "fix": "none"
+        },
         "noVoidTypeReturn": "error",
         "useGraphqlNamedOperations": "error",
         "useImportExtensions": "error",
