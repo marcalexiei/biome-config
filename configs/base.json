@@ -192,6 +192,7 @@
         "noNestedTernary": "error",
         "noNonNullAssertion": "error",
         "noParameterAssign": "error",
+        "noYodaExpression": "error",
         "noShoutyConstants": "error",
         "noSubstr": "error",
         "noUnusedTemplateLiteral": "error",
