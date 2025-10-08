@@ -265,6 +265,7 @@
         "noApproximativeNumericConstant": "error",
         "noAssignInExpressions": "error",
         "noAsyncPromiseExecutor": "error",
+        "noBiomeFirstException": "error",
         "noBitwiseOperators": "error",
         "noCatchAssign": "error",
         "noClassAssign": "error",
