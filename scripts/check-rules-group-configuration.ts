@@ -3,12 +3,39 @@ import process from 'node:process';
 
 /**
  * ```sh
- * node ./scripts/get-rules.ts Nursery
+ * node ./scripts/check-rules-group-configuration.ts GROUP
  * ```
  */
 
+function log(
+  type: 'info' | 'error' | 'success' | (string & {}),
+  ...others: Array<unknown>
+) {
+  let icon: string | undefined;
+  switch (type) {
+    case 'info':
+      icon = 'ℹ️';
+      break;
+
+    case 'error':
+      icon = '❌';
+      break;
+
+    case 'success':
+      icon = '✅';
+      break;
+
+    default:
+      throw new Error('Invalid type for log');
+  }
+
+  // biome-ignore lint/suspicious/noConsole: logger function
+  console.log(icon, ...others);
+  return;
+}
+
 const availableGroups = [
-  'A11y',
+  // 'A11y',
   'Complexity',
   'Correctness',
   'Nursery',
@@ -21,9 +48,11 @@ const availableGroups = [
 const [, , groupName] = process.argv;
 
 if (typeof groupName !== 'string' || !availableGroups.includes(groupName)) {
-  throw new Error(
+  log(
+    'error',
     ['Invalid group. Available groups:', ...availableGroups].join('\n'),
   );
+  process.exit(1);
 }
 
 const configSchema = JSON.parse(
@@ -47,13 +76,7 @@ const missingRuleNames: Array<string> = [];
 
 const ignoredRules = [
   // Correctness
-  'noChildrenProp',
-  'noNodejsModules',
-  'noPrivateImports',
-  'noProcessGlobal',
-  'noRenderReturnValue',
-  'useIsNan', // default enabled
-  'noVoidTypeReturn', // default enabled
+  'noNodejsModules', // should be set by user
   'noSolidDestructuredProps', // solid
 
   // Nursery
@@ -63,16 +86,15 @@ const ignoredRules = [
   'noRestrictedElements',
   'useReadonlyClassProperties',
   'noUnresolvedImports', // typescript already handle this
-  'useSolidForComponent', // solid
 
   // identify `swaggerObject` and `createJsonSchemaTransformObject - OpenAPI 2.0 is not supported` as potential secrets
   // https://github.com/biomejs/biome/issues/4113
   'noSecrets',
 
-  'noVueReservedProps',
-  'noVueDataObjectDeclaration',
-  'noVueReservedKeys',
-  'useVueMultiWordComponentNames',
+  'noVueReservedProps', // vue
+  'noVueDataObjectDeclaration', // vue
+  'noVueReservedKeys', // vue
+  'useVueMultiWordComponentNames', // vue
 
   'noNextAsyncClientComponent', // next
   'noUnwantedPolyfillio', // next
@@ -89,6 +111,8 @@ const ignoredRules = [
   'useImageSize', // qwik
   'useQwikClasslist', // qwik
 
+  'useSolidForComponent', // solid
+
   // Style
   'noDoneCallback',
   'noEnum',
@@ -104,31 +128,12 @@ const ignoredRules = [
   'useNodeAssertStrict',
 
   // Suspicious
-  'useDefaultSwitchClauseLast', // default enabled
-  'noMisrefactoredShorthandAssign', // default enabled
-  'noOctalEscape', // default enabled
-  'noMisleadingCharacterClass', // default enabled
-  'noIrregularWhitespace', // default enabled
-  'noLabelVar', // default enabled
-  'noImportAssign', // default enabled
-  'noImplicitAnyLet', // default enabled
-  'noGlobalIsFinite', // default enabled
-  'noFallthroughSwitchClause', // default enabled
-  'noExtraNonNullAssertion', // default enabled
-  'noEmptyInterface', // default enabled
-  'noEmptyBlock', // default enabled
-  'noWith', // default enabled
-  'noSelfCompare', // default enabled
-  'noQuickfixBiome', // not needed
-
   'noDocumentImportInPage', // next
   'noHeadImportInDocument', // next
 
   'noDuplicateFields', // graphql
 
   'noReactSpecificProps', // solid
-
-  'noImportantInKeyframe', // css default enabled
 ];
 
 for (const ruleName of rules) {
@@ -137,8 +142,8 @@ for (const ruleName of rules) {
   const configGroupReact = configReact.linter.rules[groupName.toLowerCase()];
 
   if (!(configGroupBase || configGroupCSS || configGroupReact)) {
-    console.error(`Rules group ${groupName} not found`);
-    process.exit();
+    log('error', `Rules group ${groupName} not found`);
+    process.exit(1);
   }
 
   if (ignoredRules.includes(ruleName)) {
@@ -157,12 +162,14 @@ for (const ruleName of rules) {
 }
 
 if (missingRuleNames.length === 0) {
-  console.info(`All rules has been configured for ${groupName}`);
+  log('success', `All rules has been configured for ${groupName}`);
 } else {
-  console.info(
+  log(
+    'error',
     [
       `The following ${groupName} rules are not configured`,
-      ...missingRuleNames,
+      ...missingRuleNames.map((it) => `  - ${it}`),
     ].join('\n'),
   );
+  process.exit(1);
 }
