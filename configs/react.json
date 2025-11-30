@@ -15,7 +15,11 @@
         "useJsxKeyInIterable": "error"
       },
       "nursery": {
-        "useReactFunctionComponents": "error"
+        "noDuplicatedSpreadProps": "error",
+        "noLeakedRender": "error",
+        "noReactForwardRef": "error",
+        "noSyncScripts": "error",
+        "noUnknownAttribute": "error"
       },
       "security": {
         "noBlankTarget": "error",
@@ -25,7 +29,8 @@
       "style": {
         "noImplicitBoolean": "off",
         "useFragmentSyntax": "error",
-        "useConsistentCurlyBraces": "error"
+        "useConsistentCurlyBraces": "error",
+        "useReactFunctionComponents": "error"
       },
       "suspicious": {
         "noArrayIndexKey": "error",

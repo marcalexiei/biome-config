@@ -1,10 +1,5 @@
 # `@marcalexiei/biome-config`
 
-[![CI][CIBadge]][CIURL]
-[![Formatted with Biome][CodeStyleBadge]][CodeStyleURL]
-[![npm version][npmVersionBadge]][npmVersionURL]
-[![issues][issuesBadge]][issuesURL]
-
 [CIBadge]: https://img.shields.io/github/actions/workflow/status/marcalexiei/biome-config/ci.yml?style=for-the-badge&logo=github&event=push&label=CI
 [CIURL]: https://github.com/marcalexiei/biome-config/actions/workflows/ci.yml
 [CodeStyleBadge]: https://img.shields.io/badge/Formatted_with-Biome-60a5fa?style=for-the-badge&logo=biome
@@ -13,6 +8,11 @@
 [npmVersionURL]: https://www.npmjs.com/package/@marcalexiei/biome-config
 [issuesBadge]: https://img.shields.io/github/issues/marcalexiei/biome-config.svg?style=for-the-badge
 [issuesURL]: https://github.com/marcalexiei/biome-config/issues
+
+[![CI][CIBadge]][CIURL]
+[![Formatted with Biome][CodeStyleBadge]][CodeStyleURL]
+[![npm version][npmVersionBadge]][npmVersionURL]
+[![issues][issuesBadge]][issuesURL]
 
 ## Getting started
 
@@ -50,9 +50,14 @@
 > }
 > ```
 
+##  Note about biome version
+
+The configuration depends on the `nursery` rule group, which is experimental and may change between minor releases.
+For this reason, the `@biomejs/biome` `peerDependencies` entry in `package.json` uses the `Major.Minor.x` version pattern.
+
 ## Additional configs
 
-There additional configs that can be used:
+There are additional configs that can be used:
 
 - `react`
 - `css`

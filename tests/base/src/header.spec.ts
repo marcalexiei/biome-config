@@ -4,8 +4,8 @@ function importOriginal<T>(): Promise<T> {
 }
 
 function mock(s: string, f: () => unknown): void {
-  typeof s;
-  typeof f;
+  const a = [typeof s, typeof f];
+  a.slice();
 }
 
 const ThemeContextProvider = 'a';
@@ -15,7 +15,7 @@ importOriginal<{
   ThemeContextProvider: typeof ThemeContextProvider;
   useThemeContext: typeof useThemeContext;
 }>().catch(() => {
-  /**/
+  //
 });
 
 mock('../../components/App/AppPage404', () => ({

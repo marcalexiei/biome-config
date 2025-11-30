@@ -1,3 +1,4 @@
 import { fetchData } from './utils';
 
-typeof fetchData;
+const test = typeof fetchData;
+test.charCodeAt(1);
