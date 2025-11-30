@@ -1,5 +1,11 @@
 # @marcalexiei/biome-config
 
+## 3.0.0
+
+### Major Changes
+
+- [#30](https://github.com/marcalexiei/biome-config/pull/30) [`538f42e`](https://github.com/marcalexiei/biome-config/commit/538f42e3fa977af1d40a153690c227adee22b13e) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat!: support biome 2.3.x
+
 ## 2.1.0
 
 ### Minor Changes
