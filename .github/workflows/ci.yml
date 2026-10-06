@@ -37,6 +37,9 @@ jobs:
 
       - name: Test
         run: pnpm run test
+        env:
+          # unset since setup-node v7; pnpm's warning would leak into test snapshots
+          NODE_AUTH_TOKEN: ''
 
   check-rules-configuration:
     name: Check that all rules are configured
