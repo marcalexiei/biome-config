@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Install Dependencies
         uses: ./.github/actions/install-dependencies
@@ -37,6 +37,9 @@ jobs:
 
       - name: Test
         run: pnpm run test
+        env:
+          # unset since setup-node v7; pnpm's warning would leak into test snapshots
+          NODE_AUTH_TOKEN: ''
 
   check-rules-configuration:
     name: Check that all rules are configured
@@ -45,7 +48,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Install Dependencies
         uses: ./.github/actions/install-dependencies
