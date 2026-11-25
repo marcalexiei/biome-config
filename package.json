@@ -37,7 +37,7 @@
     "lint:fix": "biome lint --fix",
     "test": "pnpm --workspace-concurrency=1 --filter=\"tests-*\" run test",
     "release": "changeset publish",
-    "check-all": "pnpm run \"/^(lint|test|format|format:tests)$/\"",
+    "validate": "pnpm run \"/^(lint|test|format|format:tests)$/\"",
     "check-rules-configuration": "node ./scripts/check-rules-configuration.ts "
   },
   "peerDependencies": {
